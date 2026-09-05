@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Novara Reads | Stories From The Heart</title>
+
+<meta name="description"
+content="Novara Reads — heartfelt digital books about love, memories, heartbreak, healing and the feelings we leave unspoken.">
+
+<style>
+
+:root {
+    --cream: #fbf5ef;
+    --soft: #fffaf7;
+    --rose: #ead4d0;
+    --burgundy: #713b43;
+    --dark: #4b3030;
+    --gold: #b18a67;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,250,247,0.97);
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 18px rgba(75,48,48,0.08);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--burgundy);
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: var(--burgundy);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 90px 20px;
+    background: linear-gradient(
+        135deg,
+        #fbf5ef,
+        #f1deda
+    );
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.eyebrow {
+    color: var(--burgundy);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 62px;
+    line-height: 1.08;
+    color: var(--burgundy);
+    margin-bottom: 22px;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.hero-description {
+    max-width: 720px;
+    margin: auto;
+    font-size: 20px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 31px;
+    border-radius: 999px;
+    background: var(--burgundy);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.25s;
+    box-shadow: 0 8px 22px rgba(113,59,67,0.18);
+}
+
+.btn:hover {
+    background: #542d34;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    display: inline-block;
+    margin-top: 28px;
+    margin-left: 8px;
+    padding: 13px 30px;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--burgundy);
+    border: 1px solid var(--burgundy);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-outline:hover {
+    background: var(--burgundy);
+    color: white;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 85px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--burgundy);
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+/* BOOK */
+
+.book-section {
+    background: var(--soft);
+}
+
+.book-card {
+    max-width: 1100px;
+    margin: auto;
+    padding: 35px;
+    background: #fffaf7;
+    border-radius: 28px;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 55px;
+    align-items: center;
+    box-shadow: 0 12px 35px rgba(75,48,48,0.08);
+}
+
+.book-cover {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(50,30,30,0.20);
+}
+
+.book-info h2 {
+    color: var(--burgundy);
+    font-size: 38px;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.quote {
+    font-size: 20px;
+    font-style: italic;
+    color: #7c5555;
+    margin-bottom: 20px;
+}
+
+.book-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.book-list li {
+    margin: 8px 0;
+}
+
+.small-note {
+    font-size: 14px;
+    color: #765b5b;
+    margin-top: 14px;
+}
+
+/* WHY READ */
+
+.why-section {
+    background: var(--cream);
+}
+
+.why-grid {
+    max-width: 1050px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.why-card {
+    background: #f4ded9;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.why-card h3 {
+    color: var(--burgundy);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* PURCHASE */
+
+.purchase-box {
+    max-width: 850px;
+    margin: 45px auto 0;
+    text-align: center;
+    background: #f1ddd8;
+    padding: 40px;
+    border-radius: 24px;
+}
+
+.purchase-box h3 {
+    color: var(--burgundy);
+    font-size: 29px;
+    margin-bottom: 12px;
+}
+
+/* FUTURE BOOKS */
+
+.future-books {
+    background: var(--soft);
+    text-align: center;
+}
+
+/* ABOUT */
+
+.about {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-box {
+    background: #f4ded9;
+    padding: 45px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* FAQ */
+
+.faq {
+    max-width: 850px;
+    margin: auto;
+}
+
+details {
+    background: var(--soft);
+    margin: 12px 0;
+    padding: 18px 22px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(75,48,48,0.06);
+}
+
+summary {
+    cursor: pointer;
+    color: var(--burgundy);
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #f4ded9;
+    text-align: center;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* FOOTER */
+
+footer {
+    background: #4d3033;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer-small {
+    font-size: 13px;
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .tagline {
+        font-size: 21px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+    .book-card {
+        grid-template-columns: 1fr;
+        padding: 22px;
+        gap: 30px;
+    }
+
+    .book-info h2 {
+        font-size: 30px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+    }
+
+    section {
+        padding: 65px 20px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        Novara Reads
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#home">Home</a>
+
+        <a href="#books">Books</a>
+
+        <a href="#why-read">Why Read</a>
+
+        <a href="#about">About</a>
+
+        <a href="#faq">FAQ</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</nav>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Novara Reads
+        </div>
+
+        <div class="tagline">
+            Stories, feelings & words from the heart.
+        </div>
+
+        <h1>
+            Read What Your Heart Couldn't Say.
+        </h1>
+
+        <p class="hero-description">
+            A cozy digital bookstore for heartfelt stories,
+            unspoken emotions, memories, healing and
+            meaningful words.
+        </p>
+
+
+        <!-- FUTURE-PROOF STORE BUTTON -->
+
+        <a
+            class="btn"
+            href="https://waqaram.com/s/novara-reads"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            📚 Explore All Books
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- BOOK -->
+
+<section class="book-section" id="books">
+
+    <h2 class="section-title">
+        Featured Book
+    </h2>
+
+    <p class="section-subtitle">
+        A quiet collection for anyone who feels deeply,
+        loves quietly, and carries words they never got
+        to say.
+    </p>
+
+
+    <div class="book-card">
+
+
+        <!-- BOOK COVER -->
+
+        <div>
+
+            <img
+                src="book-cover.jpg"
+                alt="The Words My Heart Never Said book cover"
+                class="book-cover">
+
+        </div>
+
+
+        <!-- BOOK INFORMATION -->
+
+        <div class="book-info">
+
+            <h2>
+                The Words My Heart Never Said
+            </h2>
+
+            <p class="quote">
+                “Some feelings never fade,
+                they just stay unspoken.”
+            </p>
+
+            <p>
+                A heartfelt collection of unspoken feelings,
+                love, longing, memories, heartbreak, healing,
+                and the words we never found the courage to say.
+            </p>
+
+
+            <ul class="book-list">
+
+                <li>
+                    ❤️ Love & unspoken emotions
+                </li>
+
+                <li>
+                    💭 Memories & deep thoughts
+                </li>
+
+                <li>
+                    💔 Heartbreak & healing
+                </li>
+
+                <li>
+                    🌙 Silent goodbyes & things left unsaid
+                </li>
+
+            </ul>
+
+
+            <!-- DIRECT BUY BUTTON -->
+
+            <a
+                class="btn"
+                href="https://waqaram.com/product/the-words-my-heart-never-said-034f10a6-ab92-4bb4-bccf-ff10de522105"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                ❤️ Buy This Book — Rs 500
+
+            </a>
+
+
+            <!-- ALL BOOKS -->
+
+            <a
+                class="btn-outline"
+                href="https://waqaram.com/s/novara-reads"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                📖 View All Books
+
+            </a>
+
+
+            <p class="small-note">
+                Digital ebook. No physical product will be shipped.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- WHY READ -->
+
+<section class="why-section" id="why-read">
+
+    <h2 class="section-title">
+        Why Should You Read This Book?
+    </h2>
+
+    <p class="section-subtitle">
+        Because sometimes the words we need most
+        are the ones we were never able to say ourselves.
+    </p>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <h3>
+                ❤️ If You Feel Deeply
+            </h3>
+
+            <p>
+                These pages are for people who experience
+                emotions deeply but don't always know how
+                to put those feelings into words.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>
+                🌙 For Feelings Left Unsaid
+            </h3>
+
+            <p>
+                Love, longing, memories, quiet goodbyes
+                and unfinished conversations find a gentle
+                voice throughout this collection.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>
+                💭 A Moment to Pause
+            </h3>
+
+            <p>
+                Read slowly, reflect on your own memories,
+                and give yourself a peaceful moment away
+                from the noise of everyday life.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>
+                ✨ Relatable & Comforting
+            </h3>
+
+            <p>
+                If you've ever thought,
+                “I wish I could explain how I feel,”
+                you may find pieces of your own story
+                between these pages.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- WHY PURCHASE -->
+
+    <div class="purchase-box">
+
+        <h3>
+            Why Purchase Your Own Copy?
+        </h3>
+
+        <p>
+            Keep a personal copy you can return to whenever
+            you need comfort, reflection, or a few words
+            that understand how you feel.
+        </p>
+
+        <p style="margin-top:12px;">
+            Your purchase also supports an independent creator
+            and helps Novara Reads bring more heartfelt books
+            to readers.
+        </p>
+
+
+        <a
+            class="btn"
+            href="https://waqaram.com/product/the-words-my-heart-never-said-034f10a6-ab92-4bb4-bccf-ff10de522105"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            ❤️ Purchase Your Copy — Rs 500
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- FUTURE BOOKS -->
+
+<section class="future-books">
+
+    <h2 class="section-title">
+        More Books, More Stories
+    </h2>
+
+    <p class="section-subtitle">
+
+        New books will be added to the Novara Reads store.
+        You can always find the latest collection through
+        the same button.
+
+    </p>
+
+
+    <a
+        class="btn"
+        href="https://waqaram.com/s/novara-reads"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        📚 Browse All Books
+
+    </a>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="about">
+
+        <div class="about-box">
+
+            <h2 class="section-title">
+                About Novara Reads
+            </h2>
+
+            <p>
+                Novara Reads is a cozy digital bookstore
+                created for readers who feel deeply,
+                love quietly, and find comfort in words.
+            </p>
+
+            <br>
+
+            <p>
+                Here you'll discover heartfelt ebooks,
+                emotional writing, poetry, reflections
+                and stories about the moments that stay
+                in our hearts.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+    <h2 class="section-title">
+        Frequently Asked Questions
+    </h2>
+
+
+    <div class="faq">
+
+
+        <details>
+
+            <summary>
+                Where can I buy a book?
+            </summary>
+
+            <p>
+                Click “Buy This Book” for the featured book,
+                or “Explore All Books” to visit the Novara Reads
+                store and choose from all available books.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Are these physical books?
+            </summary>
+
+            <p>
+                No. Novara Reads products are digital ebooks.
+                No physical product will be shipped.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                How will I receive my ebook?
+            </summary>
+
+            <p>
+                After purchasing through the Waqaram product
+                page, the digital product is delivered according
+                to the purchase page.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Will new books be added?
+            </summary>
+
+            <p>
+                Yes. New books will be added to the Novara Reads
+                store. The “Explore All Books” button will always
+                take customers to the same store.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Can I contact Novara Reads?
+            </summary>
+
+            <p>
+                Yes. You can email us, call us, or contact us
+                on WhatsApp.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Who is this book for?
+            </summary>
+
+            <p>
+                It is for readers who enjoy emotional,
+                relatable and reflective writing about
+                love, memories, heartbreak, healing and
+                unspoken feelings.
+            </p>
+
+        </details>
+
+    </div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        Get In Touch
+    </h2>
+
+    <p>
+        Have a question about a book or your order?
+        We'd love to hear from you.
+    </p>
+
+
+    <div class="contact-buttons">
+
+
+        <!-- EMAIL -->
+
+        <a
+            class="btn"
+            href="mailto:info.novara1@gmail.com">
+
+            📧 Email Us
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            class="btn"
+            href="https://wa.me/923704778105"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            💬 WhatsApp
+
+        </a>
+
+
+        <!-- PHONE -->
+
+        <a
+            class="btn-outline"
+            href="tel:+923704778105">
+
+            📱 Call Us
+
+        </a>
+
+    </div>
+
+
+    <p style="margin-top:20px;">
+        info.novara1@gmail.com
+    </p>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <strong>
+        Novara Reads
+    </strong>
+
+    <p class="footer-small">
+        Stories, feelings & words from the heart. ❤️
+    </p>
+
+
+    <p class="footer-small">
+
+        <a href="#home">Home</a> ·
+
+        <a href="#books">Books</a> ·
+
+        <a href="#why-read">Why Read</a> ·
+
+        <a href="#about">About</a> ·
+
+        <a href="#faq">FAQ</a> ·
+
+        <a href="#contact">Contact</a>
+
+    </p>
+
+
+    <p class="footer-small">
+        © 2026 Novara Reads. All rights reserved.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
